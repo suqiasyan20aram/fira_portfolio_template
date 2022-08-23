@@ -1,0 +1,95 @@
+.headerSection {
+    position: fixed;
+    z-index: 100;
+    width: 80%;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 64px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  8px 8px 16px #bebebe,
+    -8px -8px 16px #ffffff;
+}
+
+.headerLogo {
+}
+
+.headerLogoText {
+    font-family: 'Abril Fatface', cursive;
+    stroke-width: 1;
+    /*stroke: #646464;*/
+    font-size: 40px;
+    font-weight: 700;
+    fill: #646464;
+    /*animation: stroke 5s infinite alternate;*/
+}
+
+.linksBox {
+    display: flex;
+}
+
+.links {
+    display: flex;
+}
+
+.linkWrapper {
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: 56px;
+}
+
+.link {
+    text-decoration: none;
+    color: #454545;
+}
+
+.burgerMenuWrapper {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burgerMenu {
+    fill: var(--textColor);
+}
+
+@media screen and (max-width: 1024px) {
+    .links {
+        display: none;
+    }
+
+    .burgerMenuWrapper {
+        display: inline-block;
+    }
+}
+
+/*@keyframes stroke {*/
+/*    0% {*/
+/*        fill: rgba(72, 138, 20, 0);*/
+/*        stroke: #646464;*/
+/*        stroke-dashoffset: 25%;*/
+/*        stroke-dasharray: 0 50%;*/
+/*        stroke-width: 1;*/
+/*    }*/
+/*    70% {*/
+/*        fill: rgba(72, 138, 20, 0);*/
+/*        stroke: #646464;*/
+/*    }*/
+/*    80% {*/
+/*        fill: rgba(72, 138, 20, 0);*/
+/*        stroke: #646464;*/
+/*        stroke-width: 1;*/
+/*    }*/
+/*    100% {*/
+/*        fill: rgba(72, 138, 20, 0);*/
+/*        stroke: #646464;*/
+/*        stroke-dashoffset: -25%;*/
+/*        stroke-dasharray: 50% 0;*/
+/*        stroke-width: 0;*/
+/*    }*/
+/*}*/

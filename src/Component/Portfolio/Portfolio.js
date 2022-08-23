@@ -2,10 +2,12 @@ import React, {useEffect} from "react";
 import {gsap, Elastic} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
+import classes from './Portfolio.module.css'
+import {data} from "../../data";
+
 const Portfolio = () => {
 
     useEffect(() => {
-
         gsap.to("#title2", {
             x: 30,
             duration: 10,
@@ -17,7 +19,6 @@ const Portfolio = () => {
                 end: 'top 15%',
             },
         })
-
 
         gsap.fromTo(".portfolio_button", {
                 scale: 0.5,
@@ -365,38 +366,21 @@ const Portfolio = () => {
     }, [])
 
     return (
-        <div id="portfolio" className="portfolio_block">
-            <div className="portfolio_placeholder">
+        <section id="portfolio" className={classes.portfolioSection}>
+            <div className={classes.portfolioPlaceholder}>
                 <h1 id={"title2"} className="title">
                     portfolio
                 </h1>
             </div>
-            <div className="portfolio_projects_block">
-                <div className="top_section">
-                    <div className="one">
-                        <span className="portfolio_description">Test</span>
-                    </div>
-                    <div className="two">
-                        2
-                    </div>
-                    <div className="three">
-                        3
-                    </div>
-                </div>
-                <div className="bottom_section">
-                    <div className="four">
-                        4
-                    </div>
-                    <div className="five">
-                        5
-                    </div>
-                    <div className="six">
-                        6
-                    </div>
-                </div>
+            <div className={classes.portfolioItems}>
+                {data.portfolios.map(portfolio => {
+                    return (
+                        <div className={classes.portfolioItem}></div>
+                    )
+                })}
             </div>
 
-        </div>
+        </section>
     )
 }
 export default Portfolio
