@@ -1,4 +1,4 @@
-import Aram from './Aram-data'
+import Aram from './data-mocks/Aram-data'
 
 export const data = Aram
 

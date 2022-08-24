@@ -12,6 +12,7 @@ import Portfolio from "./Component/Portfolio/Portfolio";
 import Experience from "./Component/Experience/Experience";
 import Contact from "./Component/Contact/Contact";
 import InfiniteScrollSlide from "./Component/InfiniteScroll/InfiniteScroll";
+import Three from "./Component/Three/Three";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -32,6 +33,7 @@ const App = () => {
             <Menu isOpen={isOpen} onClose={() => toggleMenu(false)}/>
             <InfiniteScrollSlide/>
             <Contact/>
+            <Three/>
         </div>
     );
 }

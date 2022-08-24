@@ -1,4 +1,4 @@
-import aboutImage from "./images/AramAboutImage.jpg";
+import aboutImage from "../images/AramAboutImage.jpg";
 
 export default {
     name: "Aram",
