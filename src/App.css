@@ -20,7 +20,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .person_block .person_name {
@@ -31,7 +30,9 @@
     font-weight: 400;
     font-size: 100px;
     line-height: 136px;
-    color: #646464;
+    color: var(--lightGrey);
+    text-shadow: 5px 5px 10px #b1b1b1,
+    -5px -5px 10px #ffffff;
 }
 
 .person_block .person_profession {
@@ -42,7 +43,9 @@
     font-weight: 200;
     font-size: 62px;
     line-height: 78px;
-    color: #454545;
+    color: var(--lightGrey);
+    text-shadow:  2px 2px 4px #5a5a5a,
+    -2px -2px 4px #ffffff;
 }
 
 .about_block {

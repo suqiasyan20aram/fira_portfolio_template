@@ -19,13 +19,12 @@
 }
 
 .headerLogoText {
-    font-family: 'Abril Fatface', cursive;
+    font-family: sans-serif;
     stroke-width: 1;
-    /*stroke: #646464;*/
+    stroke: #646464;
     font-size: 40px;
     font-weight: 700;
-    fill: #646464;
-    /*animation: stroke 5s infinite alternate;*/
+    animation: stroke 5s infinite alternate;
 }
 
 .linksBox {
@@ -68,28 +67,28 @@
     }
 }
 
-/*@keyframes stroke {*/
-/*    0% {*/
-/*        fill: rgba(72, 138, 20, 0);*/
-/*        stroke: #646464;*/
-/*        stroke-dashoffset: 25%;*/
-/*        stroke-dasharray: 0 50%;*/
-/*        stroke-width: 1;*/
-/*    }*/
-/*    70% {*/
-/*        fill: rgba(72, 138, 20, 0);*/
-/*        stroke: #646464;*/
-/*    }*/
-/*    80% {*/
-/*        fill: rgba(72, 138, 20, 0);*/
-/*        stroke: #646464;*/
-/*        stroke-width: 1;*/
-/*    }*/
-/*    100% {*/
-/*        fill: rgba(72, 138, 20, 0);*/
-/*        stroke: #646464;*/
-/*        stroke-dashoffset: -25%;*/
-/*        stroke-dasharray: 50% 0;*/
-/*        stroke-width: 0;*/
-/*    }*/
-/*}*/
+@keyframes stroke {
+    0% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: #646464;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 1;
+    }
+    70% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: #646464;
+    }
+    80% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: #646464;
+        stroke-width: 2;
+    }
+    100% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: #646464;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
