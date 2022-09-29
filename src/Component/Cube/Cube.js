@@ -19,84 +19,133 @@ const Cube = () => {
 
         gsap.fromTo("#cube-container", {}, {
             scrollTrigger: {
-                pin: '#cube-container', trigger: "#cube-container", scrub: 0, start: 'top 0', end: '+=3000',
+                pin: '#cube-container', trigger: "#cube-container", scrub: 0, start: 'top 0', end: '+=2600',
             },
         })
 
+        gsap.fromTo("#cube", {translateZ: -5000}, {
+            translateZ: defaultTranslateZ, scrollTrigger: {
+                trigger: "#root", scrub: 1, start: window.innerHeight / 3, end: `+=${window.innerHeight / 3}`
+            },
+        })
 
         gsap.fromTo("#cube", {}, {
             rotateX: -90, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '0', end: '+=300'
+                trigger: "#cube-section", scrub: 1, start: '0', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '300', end: '+=100'
+                trigger: "#cube-section", scrub: 1, start: '300', end: '+=100'
             },
         })
 
 
         gsap.fromTo("#cube", {}, {
             rotateX: 180, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '400', end: '+=300'
+                trigger: "#cube-section", scrub: 1, start: '400', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '700', end: '+=100'
+                trigger: "#cube-section", scrub: 1, start: '700', end: '+=100'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             rotateX: 90, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '800', end: '+=300'
+                trigger: "#cube-section", scrub: 1, start: '800', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '1100', end: '+=100'
+                trigger: "#cube-section", scrub: 1, start: '1100', end: '+=100'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             rotateX: 360, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '1200', end: '+=300'
+                trigger: "#cube-section", scrub: 1, start: '1200', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '1500', end: '+=100'
+                trigger: "#cube-section", scrub: 1, start: '1500', end: '+=100'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             rotateX: 360, rotateY: 90, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '1600', end: '+=300'
+                trigger: "#cube-section", scrub: 1, start: '1600', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '1900', end: '+=100'
+                trigger: "#cube-section", scrub: 1, start: '1900', end: '+=100'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             rotateX: 360, rotateY: -90, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '2000', end: '+=300'
+                trigger: "#cube-section", scrub: 1, start: '2000', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 0, start: '2300', end: '+=100'
+                trigger: "#cube-section", scrub: 1, start: '2300', end: '+=100'
             },
         })
 
+
+        // Random
+        gsap.fromTo('#top', {}, {
+            opacity: 0, translateY: '-100vh', scrollTrigger: {
+                trigger: "#cube-section", scrub: 0, start: '2400', end: '+=400'
+            },
+        })
+
+        gsap.fromTo('#bottom', {}, {
+            opacity: 0, translateY: '100vh', scrollTrigger: {
+                trigger: "#cube-section", scrub: 0, start: '2400', end: '+=400'
+            },
+        })
+
+
+        gsap.fromTo('#right', {}, {
+            opacity: 0, translateX: '100vh', scrollTrigger: {
+                trigger: "#cube-section", scrub: 0, start: '2400', end: '+=400'
+            },
+        })
+
+        gsap.fromTo('#left', {}, {
+            opacity: 0, translateX: '-100vh', scrollTrigger: {
+                trigger: "#cube-section", scrub: 0, start: '2400', end: '+=400'
+            },
+        })
+
+        gsap.fromTo('#front', {}, {
+            opacity: 0, translateZ: '100vh', scrollTrigger: {
+                trigger: "#cube-section", scrub: 0, start: '2400', end: '+=400'
+            },
+        })
+
+        gsap.fromTo('#back', {}, {
+            opacity: 0, translateZ: '-100vh', scrollTrigger: {
+                trigger: "#cube-section", scrub: 0, start: '2400', end: '+=400'
+            },
+        })
+
+        gsap.fromTo("#cube", {}, {
+            rotateY: -140, scrollTrigger: {
+                trigger: "#cube-section", scrub: 1, start: '2400', end: '+=400'
+            },
+        })
 
     }, [])
 
@@ -105,7 +154,7 @@ const Cube = () => {
             <div id={'cube-container'} className={classes.cubeContainer}>
                 <div id={'cube-wrapper'} className={classes.cubeWrapper}>
                     <div id={'cube'} className={classes.cube}>
-                        <div className={classNames([classes.side, classes.top])}>
+                        <div id={'top'} className={classNames([classes.side, classes.top])}>
                             <img src={top} alt="top side" className={classes.sideImage}/>
                             <div className={classes.sideInfo}>
                                 <p className={classes.title}>{data.cube.top.title}</p>
@@ -119,7 +168,7 @@ const Cube = () => {
                                 }
                             </div>
                         </div>
-                        <div className={classNames([classes.side, classes.bottom])}>
+                        <div id={'bottom'} className={classNames([classes.side, classes.bottom])}>
                             <img src={bottom} alt="bottom side" className={classes.sideImage}/>
                             <div className={classes.sideInfo}>
                                 <p className={classes.title}>{data.cube.bottom.title}</p>
@@ -133,7 +182,7 @@ const Cube = () => {
                                 }
                             </div>
                         </div>
-                        <div className={classNames([classes.side, classes.left])}>
+                        <div id={'left'} className={classNames([classes.side, classes.left])}>
                             <img src={left} alt="left side" className={classes.sideImage}/>
                             <div className={classes.sideInfo}>
                                 <p className={classes.title}>{data.cube.left.title}</p>
@@ -147,7 +196,7 @@ const Cube = () => {
                                 }
                             </div>
                         </div>
-                        <div className={classNames([classes.side, classes.right])}>
+                        <div id={'right'} className={classNames([classes.side, classes.right])}>
                             <img src={right} alt="right side" className={classes.sideImage}/>
                             <div className={classes.sideInfo}>
                                 <p className={classes.title}>{data.cube.right.title}</p>
@@ -161,7 +210,7 @@ const Cube = () => {
                                 }
                             </div>
                         </div>
-                        <div className={classNames([classes.side, classes.back])}>
+                        <div id={'back'} className={classNames([classes.side, classes.back])}>
                             <img src={back} alt="back side" className={classes.sideImage}/>
                             <div className={classes.sideInfo}>
                                 <p className={classes.title}>{data.cube.back.title}</p>
@@ -175,7 +224,7 @@ const Cube = () => {
                                 }
                             </div>
                         </div>
-                        <div className={classNames([classes.side, classes.front])}>
+                        <div id={'front'} className={classNames([classes.side, classes.front])}>
                             <img src={front} alt="front side" className={classes.sideImage}/>
                             <div className={classes.sideInfo}>
                                 <p className={classes.title}>{data.cube.front.title}</p>

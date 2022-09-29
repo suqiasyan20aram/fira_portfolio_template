@@ -1,4 +1,4 @@
-import React, {useMemo, useEffect} from "react";
+import React, {useMemo} from "react";
 
 import classes from './Header.module.css'
 import {data} from '../../data'
