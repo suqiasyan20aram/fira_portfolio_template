@@ -1,0 +1,120 @@
+.cubeWrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+
+  --size-w: 65vh;
+  --size-h: 65vh;
+  --half-w: calc(var(--size-w) / 2);
+  --half-h: calc(var(--size-h) / 2);
+
+  .cube {
+    width: var(--size-w);
+    height: var(--size-h);
+    position: relative;
+    transform: translateZ(-25vh);
+    transform-style: preserve-3d;
+
+
+    .side {
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backface-visibility: visible;
+      transform-style: preserve-3d;
+      transform-origin: center;
+
+      .sideImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .sideInfo {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+        opacity: 0;
+        transition: 0.3s opacity ease;
+        text-align: center;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        .title {
+          color: var(--white);
+          margin-bottom: 24px;
+          font-size: 24px;
+        }
+
+        .desc {
+          color: var(--white);
+          margin-bottom: 16px;
+          font-size: 16px;
+        }
+
+        .openLink {
+          color: var(--textColor);
+          text-decoration: none;
+          background-color: var(--white);
+          padding: 8px 16px;
+          font-size: 14px;
+          border-radius: 8px;
+          border: 1px solid transparent;
+          transition: 0.2s all ease;
+
+          &:hover {
+            color: var(--white);
+            background-color: transparent;
+            border-color: var(--white);
+          }
+        }
+      }
+
+
+      &.top {
+        transform: translateY(calc(-1 * var(--half-h))) rotateX(90deg);
+      }
+
+      &.bottom {
+        transform: translateY(var(--half-h)) rotateX(-90deg);
+      }
+
+      &.left {
+        width: var(--size-h);
+        transform: translateX(calc(-1 * var(--half-h))) rotateY(-90deg);
+
+      }
+
+      &.right {
+        width: var(--size-h);
+        transform: translateX(calc(var(--size-w) - var(--half-h))) rotateY(90deg);
+      }
+
+      &.back {
+        transform: rotateZ(180deg) rotateY(180deg) translateZ(var(--half-h))
+      }
+
+      &.front {
+        transform: translateZ(var(--half-h))
+      }
+    }
+  }
+}

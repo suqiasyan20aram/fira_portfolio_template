@@ -380,11 +380,6 @@
     width: 100vw;
 }
 
-.word-letter {
-    display: inline-block;
-    margin: 0 1px;
-}
-
 .slider_container {
     width: 270px;
     margin: 50px auto;

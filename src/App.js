@@ -12,7 +12,7 @@ import Portfolio from "./Component/Portfolio/Portfolio";
 import Experience from "./Component/Experience/Experience";
 import Contact from "./Component/Contact/Contact";
 import InfiniteScrollSlide from "./Component/InfiniteScroll/InfiniteScroll";
-import Three from "./Component/Three/Three";
+import Cube from "./Component/Cube/Cube";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -27,13 +27,13 @@ const App = () => {
         <div>
             <Header onOpenMenu={() => toggleMenu(true)}/>
             <Person/>
+            <Cube/>
             <About/>
             <Portfolio/>
             <Experience/>
             <Menu isOpen={isOpen} onClose={() => toggleMenu(false)}/>
             <InfiniteScrollSlide/>
             <Contact/>
-            <Three/>
         </div>
     );
 }

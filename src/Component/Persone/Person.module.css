@@ -1,0 +1,49 @@
+.personBlock {
+    position: relative;
+    height: 100vh;
+    min-height: 800px;
+    display: flex;
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.personName {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 136px;
+    color: var(--lightGrey);
+    text-shadow: 5px 5px 10px #b1b1b1,
+    -5px -5px 10px #ffffff;
+}
+
+.personProfession {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    margin-top: 250px;
+    font-weight: 200;
+    font-size: 62px;
+    line-height: 78px;
+    color: var(--lightGrey);
+    text-shadow: 2px 2px 4px #5a5a5a,
+    -2px -2px 4px #ffffff;
+}
+
+.wordLetter {
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
