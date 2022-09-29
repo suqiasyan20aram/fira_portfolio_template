@@ -1,6 +1,6 @@
 import React, {useMemo} from "react";
 
-import classes from './Header.module.css'
+import classes from './Header.module.scss'
 import {data} from '../../data'
 import {ReactComponent as MenuIcon} from '../../images/menu-icon.svg'
 

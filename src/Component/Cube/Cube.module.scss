@@ -1,14 +1,23 @@
 .cubeWrapper {
+  max-width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   perspective: 1000px;
+  overflow: hidden;
 
   --size-w: 65vh;
   --size-h: 65vh;
   --half-w: calc(var(--size-w) / 2);
   --half-h: calc(var(--size-h) / 2);
+
+  @media (orientation: portrait) {
+    --size-w: 65vw;
+    --size-h: 65vw;
+    --half-w: calc(var(--size-w) / 2);
+    --half-h: calc(var(--size-h) / 2);
+  }
 
   .cube {
     width: var(--size-w);

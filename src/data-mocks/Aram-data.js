@@ -4,7 +4,6 @@ export default {
     name: "Aram",
     surname: "Suqiasyan",
     profession: "Front-End Senior Developer",
-    aboutImage: aboutImage,
     cube: {
         front: {
             title: 'How I can help you',
@@ -30,6 +29,12 @@ export default {
             title: 'Perform code reviews',
             description: '',
         },
+    },
+    about: {
+        aboutImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGBEpwrcx9BLcNgCluJrUoR5IGp0UzC7wt7_jQqpU1&s',
+        aboutText1: '  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,lectus magna fringilla urna, porttitor',
+        aboutText2: '  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,lectus magna fringilla urna, porttitor',
+        aboutText3: '  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,lectus magna fringilla urna, porttitor',
     },
     portfolios: [
         {},

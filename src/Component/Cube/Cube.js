@@ -25,80 +25,80 @@ const Cube = () => {
 
         gsap.fromTo("#cube", {translateZ: -5000}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#root", scrub: 1, start: window.innerHeight / 3, end: `+=${window.innerHeight / 3}`
+                trigger: "#root", scrub: 0.2, start: window.innerHeight / 3, end: `+=${window.innerHeight / 2}`
             },
         })
 
         gsap.fromTo("#cube", {}, {
             rotateX: -90, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '0', end: '+=300'
+                trigger: "#cube-section", scrub: 0.2, start: '0', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '300', end: '+=100'
+                trigger: "#cube-section", scrub: 0.2, start: '300', end: '+=100'
             },
         })
 
 
         gsap.fromTo("#cube", {}, {
             rotateX: 180, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '400', end: '+=300'
+                trigger: "#cube-section", scrub: 0.2, start: '400', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '700', end: '+=100'
+                trigger: "#cube-section", scrub: 0.2, start: '700', end: '+=100'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             rotateX: 90, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '800', end: '+=300'
+                trigger: "#cube-section", scrub: 0.2, start: '800', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '1100', end: '+=100'
+                trigger: "#cube-section", scrub: 0.2, start: '1100', end: '+=100'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             rotateX: 360, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '1200', end: '+=300'
+                trigger: "#cube-section", scrub: 0.2, start: '1200', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '1500', end: '+=100'
+                trigger: "#cube-section", scrub: 0.2, start: '1500', end: '+=100'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             rotateX: 360, rotateY: 90, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '1600', end: '+=300'
+                trigger: "#cube-section", scrub: 0.2, start: '1600', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '1900', end: '+=100'
+                trigger: "#cube-section", scrub: 0.2, start: '1900', end: '+=100'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             rotateX: 360, rotateY: -90, translateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '2000', end: '+=300'
+                trigger: "#cube-section", scrub: 0.2, start: '2000', end: '+=300'
             },
         })
 
         gsap.fromTo("#cube", {}, {
             translateZ: defaultTranslateZ, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '2300', end: '+=100'
+                trigger: "#cube-section", scrub: 0.2, start: '2300', end: '+=100'
             },
         })
 
@@ -143,7 +143,7 @@ const Cube = () => {
 
         gsap.fromTo("#cube", {}, {
             rotateY: -140, scrollTrigger: {
-                trigger: "#cube-section", scrub: 1, start: '2400', end: '+=400'
+                trigger: "#cube-section", scrub: 0.2, start: '2400', end: '+=400'
             },
         })
 
